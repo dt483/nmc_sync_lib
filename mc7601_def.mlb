@@ -79,7 +79,6 @@ const CMD_HANDLER_IDLE = 0h;
 const CMD_HANDLER_IN_PROGRESS = 1h;
 
 struct CommandBlock
-    syncFlag      : word;  // Syncro flag.
     commantType   : word;  // Command type value.
     bufferAddr    : word;  // Command data buffer address.
     bufferLen     : word;  // Command data buffer length in 32-bit words.
@@ -88,6 +87,6 @@ struct CommandBlock
 end CommandBlock;
 
 //Address of command block to ARM
-const CMD_TO_ARM      = 114h;
+const CMD_TO_ARM      = 116h;
 
 end NMC_DEF;

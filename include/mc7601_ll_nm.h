@@ -41,14 +41,19 @@ extern "C" //for true C mangling
 		int wait // Wait or not for command handling
 			);
 
+	int ncl_getCommandHandlerStatus (int * status);
+
+
 	// Send high priority interrupt to ARM
 	void ncl_sendHPINT(void);
 
 	// Send low priority interrupt to ARM
 	void ncl_sendLPINT(void);
 
-	void ncl_setTSTD(void);
-	void ncl_unsetTSTD(void);
+	void ncl_setTSTD0(void);
+	void ncl_unsetTSTD0(void);
+	void ncl_setTSTD1(void);
+	void ncl_unsetTSTD1(void);
 };
 
 #endif // __MC7601_LL_NM__H__
